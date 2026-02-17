@@ -1,0 +1,166 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .top-nav {
+        margin: 0px 0px 0px 15px;
+    }
+    .top-nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .top-nav {
+        margin: 0px 0px 0px 20px;
+    }
+    .top-nav ul {
+        flex-direction: row;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .top-nav {
+        margin: 0px 0px 0px 30px;
+    }
+}
+
+
+
+:root{
+    --primary-color:#222222;
+    --outer-color:grey;
+    --tertiary-color:#F8F8F8;
+}
+
+
+.top-nav{
+    margin: -20px 0px 0px 50px;
+}
+.top-nav ul{
+    display:flex;
+    gap: 20px;
+    
+}
+.top-nav ul li{
+    list-style-type:none;
+}
+.top-nav ul img{
+    margin: 1px 10px 0px -1px;
+    
+}
+.top-nav ul li a{
+    text-decoration: none;
+    color:var(--primary-color);
+}
+
+.v-line{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80%;
+    margin-left:45px;
+}
+
+.year{
+    
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-left: 6px;
+    font-size:12px;
+    color:var(--outer-color);
+    margin-top: 70px;
+
+}
+
+.role{
+    writing-mode: vertical-rl;
+    word-spacing: -4px;
+    transform: rotate(180deg);
+    transform-origin: left;
+    font-size:12px;
+    margin-left: 20px;
+    color:var(--outer-color);
+}
+.line{
+    margin-left: 12px;
+    width: 2px;
+    flex-grow: 9;
+    background-color:var(--outer-color);
+}
+/*hello*/
+.info h1{
+    margin-top: -290px;
+    font-size:100px;
+    font-weight: 100;
+    color:var(--primary-color);
+    margin-left: 390px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*-its mohit*/
+.info h6{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 392px;
+    color:var(--primary-color);
+    font-size: 10px;
+}
+.Book-call{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 40px;
+    color:var(--primary-color);
+    text-decoration: underline;
+}
+
+.about{
+    margin-left: 20px;
+    margin-top: 230px;
+}
+.about h1{
+    padding-top:120px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about p{
+    color:var(--primary-color);
+    font-weight: 100;
+    padding-top: 20px;
+    margin-right: 30%;
+
+}
+
+.white-popup{
+    background: var(--tertiary-color);
+    text-align: center;
+    margin-top: -10%;
+    border: 1px solid black;
+    border-radius: 12px;
+    margin-left: 120px;
+
+}
+.white-popup h1{
+    margin-top: -12%;
+}
+.port{
+    
+}
+.service{
+    
+}
+.blog
+    {
+
+    }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="/css/book.css">
+</head>
+<body>
+
+   
+    <section id="book-call">
+  <h2>📞 Book a Call</h2>
+  <p>Let’s connect to discuss your project or collaboration ideas.</p>
+    <form method="post" id="bookingForm" class="book-form">
+        
+        <div class="book-form"><label for="name">Name
+        </label>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name" />
+</div>
+
+<div class="book-form">      
+<label for="email">Email</label>
+        <input type="text" name="Email" id="email" placeholder="Enter Your E-Mail" required/>
+    </div>
+
+    <div class="book-form">
+        <label for="mssg">Message</label>
+        <input type="text" name="message" id="message" placeholder="Type Your Message" required/>
+</div>
+
+<div class="book-form">
+        <label for="date">Date & Time</label>
+    <input type="datetime-local" id="date" name="date" placeholder="Enter date and time">
+</div>
+<div class="btn">
+    <button type="submit">Book a Call</button>
+</div>
+    </form>
+    </section>
+
+
+
+    <script type="module">
+import { initializeApp } from 
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+import { getFirestore, collection, addDoc, serverTimestamp } from 
+"https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+document.getElementById("bookingForm")
+.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+  const date = document.getElementById("date").value;
+
+  try {
+    await addDoc(collection(db, "bookings"), {
+      name,
+      email,
+      message,
+      date,
+      createdAt: serverTimestamp()
+    });
+
+    alert("Call booked successfully!");
+    document.getElementById("bookingForm").reset();
+
+  } catch (error) {
+    alert("Error booking call");
+    console.error(error);
+  }
+});
+</script>
+<script>document.getElementById("bookingForm")
+.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  alert("Form submitted");
+});</script>
+</body>
+</html>
