@@ -131,7 +131,7 @@ html,body{
     margin-top: 230px;
 }
 .about h1{
-    padding-top:120px ;
+    padding-top:120px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .about p{
@@ -142,21 +142,61 @@ html,body{
 
 }
 
-.white-popup{
-    background: var(--tertiary-color);
-    text-align: center;
-    margin-top: -10%;
-    border: 1px solid black;
-    border-radius: 12px;
-    margin-left: 120px;
+.ports h1{
+    margin-left: 45%;
+    font-weight: 500;
+}
+.container{
+    margin-top:200px;
+}
+.item {
+  flex: 0 0 auto;
+  width: 34%;
+  scroll-snap-align: start;
+  text-align: center;   /* Text ko image ke niche center karne ke liye */
+}
 
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem; /* Image aur text ke beech thoda gap */
 }
-.white-popup h1{
-    margin-top: -12%;
+.caption {
+  font-size: 14px;
+  color: #333;
 }
-.port{
-    
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior:smooth;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
 }
+
+.item {
+  flex: 0 0 auto;
+  width: 34%;
+  scroll-snap-align: start;
+  text-align: center;   /* Text ko image ke niche center karne ke liye */
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem; /* Image aur text ke beech thoda gap */
+}
+
+.caption {
+  font-size: 14px;
+}
+.wrapper::-webkit-scrollbar {
+  display: none;
+}    /* Smooth scrolling */
+
 .service{
     
 }
